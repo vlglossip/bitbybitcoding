@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathons - Bit by Bit</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #A1C9DF;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 600px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+        .current-hackathons {
+            background: white;
+        }
+        .upcoming-hackathons {
+            background: white;
+        }
+        h1 {
+            color: #4A7D96;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+        li {
+            background: #4A7D96;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+        .nested-list {
+            background: #E3F2FD;
+            color: #333;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+        .button {
+            background-color: #4A7D96;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #356074;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-links">
+            <a class="navbar-link" href="index.html">Home</a>
+            <a class="navbar-link" href="courses.html">Courses</a>
+            <a class="navbar-link" href="hackathons.html">Hackathons</a>
+            <a class="navbar-link" href="workwithus.html">Work With Us</a>
+            <a class="navbar-link" href="aboutus.html">About Us</a>
+        </div>
+    </div>
+    <style>
+        .navbar {
+            background-color: #4A7D96;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            color: white;
+        }
+        .navbar-brand {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .navbar-links {
+            display: flex;
+        }
+        .navbar-link {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+        .navbar-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <div class="grid-container">
+        <!-- Current Hackathons -->
+        <div class="container current-hackathons">
+            <h1>Current Hackathons</h1>
+            <h2>Web Development Hackathons</h2>
+            <ul>
+                <li>Web Dev Hackathon
+                    <div class="nested-list">Date: November 17th, 2025, Time: 12:00 PM EST - 3:00 PM EST, Judging: 3:00 PM EST - 4:00 PM EST</div>
+                </li>
+            </ul>
+            <h2>App Development Hackathons</h2>
+            <ul>
+                <li>App Dev Hackathon
+                    <div class="nested-list">Date: June 1st, 2025, Time: 12:00 PM EST - 3:00 PM EST, Judging: 3:00 PM EST - 4:00 PM EST</div>
+                </li>
+            </ul>
+            <!--<button class="button" onclick="register()">Register for Hackathons</button>-->
+        </div>
+
+        <!-- Upcoming Hackathons -->
+        <div class="container upcoming-hackathons">
+            <h1>Upcoming Hackathons</h1>
+            <h2>Web Development Hackathons</h2>
+            <ul>
+                <li>Web Dev Hackathon
+                    <div class="nested-list">Date: September 21st, 2025, Time: 12:00 PM EST - 3:00 PM EST, Judging: 3:00 PM EST - 4:00 PM EST</div>
+                </li>
+            </ul>
+            <h2>App Development Hackathons</h2>
+            <ul>
+                <li>App Dev Hackathon
+                    <div class="nested-list">Date: September 28th, 2025, Time: 12:00 PM EST - 3:00 PM EST, Judging: 3:00 PM EST - 4:00 PM EST</div>
+                </li>
+            </ul>
+            <button class="button" onclick="register()">Register for Hackathons</button>
+        </div>
+    </div>
+    <script>
+        function register() {
+            window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLScrAQ5mhmRqgzEUD47Qy4mBXhCfNv21jbNUxyeSGflAiClJ8A/viewform?usp=sharing";
+            alert("Redirecting to the registration page.");
+        }
+    </script>
+</body>
+</html>

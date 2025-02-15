@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Bit by Bit</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #A1C9DF;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 600px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+        .current-classes {
+            background: white;
+        }
+        .upcoming-classes {
+            background: white;
+        }
+        h1 {
+            color: #4A7D96;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+        li {
+            background: #4A7D96;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+        .nested-list {
+            background: #E3F2FD;
+            color: #333;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+        .button {
+            background-color: #4A7D96;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #356074;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-links">
+            <a class="navbar-link" href="index.html">Home</a>
+            <a class="navbar-link" href="courses.html">Courses</a>
+            <a class="navbar-link" href="hackathons.html">Hackathons</a>
+            <a class="navbar-link" href="workwithus.html">Work With Us</a>
+            <a class="navbar-link" href="aboutus.html">About Us</a>
+        </div>
+    </div>
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #4A7D96;
+            padding: 10px 20px;
+            color: white;
+        }
+        .navbar-brand {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .navbar-links {
+            display: flex;
+        }
+        .navbar-link {
+            margin-left: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        .navbar-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <div class="grid-container">
+        <!-- Current Classes -->
+        <div class="container current-classes">
+            <h1>Current Classes</h1>
+            <h2>Web Development Hackathon Prep</h2>
+            <ul>
+                <li>Web Dev Prep Course A
+                    <div class="nested-list">Date: August 18th, 2024, Time: 12:00 PM EST - 1:30 PM EST</div>
+                </li>
+                <li>Web Dev Prep Course B
+                    <div class="nested-list">Date: September 8th, 2024, Time: 12:00 PM EST - 1:30 PM EST</div>
+                </li>
+                <li>Web Dev Prep Course C
+                    <div class="nested-list">Date: October 20th, 2024, Time: 12:00 PM EST - 1:30 PM EST</div>
+                </li>
+            </ul>
+            <h2>App Development Hackathon Prep</h2>
+            <ul>
+                <li>App Dev Prep Course A
+                    <div class="nested-list">Date: February 2nd, 2025, Time: 12:00 PM EST - 1:30 PM EST</div>
+                </li>
+                <li>App Dev Prep Course B
+                    <div class="nested-list">Date: March 9th, 2025, Time: 12:00 PM EST - 1:30 PM EST</div>
+                </li>
+                <li>App Dev Prep Course C
+                    <div class="nested-list">Date: April 6th, 2025, Time: 12:00 PM EST - 1:30 PM EST</div>
+                </li>
+            </ul>
+            <!--<button class="button" onclick="register()">Register</button>-->
+        </div>
+
+        <!-- Upcoming Classes -->
+        <div class="container upcoming-classes">
+            <h1>Upcoming Classes</h1>
+            <h2>Web Development Hackathon Prep</h2>
+            <ul>
+                <li>Web Dev Prep Course A
+                    <div class="nested-list">Date: June 8th, 2024, Time: 12:00 PM EST - 1:30 PM EST</div>
+                </li>
+                <li>Web Dev Prep Course B
+                    <div class="nested-list">Date: July 13th, 2025, Time: 12:00 PM EST - 1:30 PM EST</div>
+                </li>
+                <li>Web Dev Prep Course C
+                    <div class="nested-list">Date: August 3rd, 2025, Time: 12:00 PM EST - 1:30 PM EST</div>
+                </li>
+            </ul>
+            <h2>App Development Hackathon Prep</h2>
+            <ul>
+                <li>App Dev Prep Course A
+                    <div class="nested-list">Date: June 29th, 2025, Time: 12:00 PM EST - 1:30 PM EST</div>
+                </li>
+                <li>App Dev Prep Course B
+                    <div class="nested-list">Date: July 20th, 2025, Time: 12:00 PM EST - 1:30 PM EST</div>
+                </li>
+                <li>App Dev Prep Course C
+                    <div class="nested-list">Date: August 17th, 2025, Time: 12:00 PM EST - 1:30 PM EST</div>
+                </li>
+            </ul>
+            <button class="button" onclick="register()">Register</button>
+        </div>
+    </div>
+    <script>
+        function register() {
+            window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLScrAQ5mhmRqgzEUD47Qy4mBXhCfNv21jbNUxyeSGflAiClJ8A/viewform?usp=sharing";
+            alert("Redirecting to the registration page.");
+        }
+    </script>
+</body>
+</html>
