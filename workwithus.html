@@ -18,6 +18,16 @@
         flex-direction: column;
     }
 
+    .logo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+        border-radius: 50%;border-radius: 50%;
+        position: absolute; top: 0; left: 0;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+
     .navbar {
         background-color: #4A7D96;
         padding: 10px;
@@ -100,6 +110,9 @@
     }
 
     </style>
+    <div>
+        <img src="images/logo-color.png" alt="Bit by Bit Coding" class="logo">
+    </div>
     <div class="navbar">
         <div class="navbar-links">
             <a class="navbar-link" href="index.html">Home</a>
@@ -125,14 +138,17 @@
         <li>Judge</li>
         <!-- Add more roles as needed -->
     </ul>
-    
-    <h2>Sign-up Form:</h2>
-</body>
-</body>
+
+    <button onclick='window.location.href="https://docs.google.com/forms/d/e/1FAIpQLSfy7vPqjmUi4KTKC3yVZHzLkG_dawAISjXfY2Mvg0RGHaZLxw/viewform?usp=sharing"'>Sign Up</button>
+    <script>
+        function redirectToGoogleForm() {
+            window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfy7vPqjmUi4KTKC3yVZHzLkG_dawAISjXfY2Mvg0RGHaZLxw/viewform?usp=sharing";
+        }
+    </script>
+
+    <!-- <footer>
+        <h5>Questions? Contact us!</h5>
+        <p>bitbybitcoding49@gmail.com</p>
+    </footer> -->
+    </body>
 </html>
-<button onclick='window.location.href="https://docs.google.com/forms/d/e/1FAIpQLSfy7vPqjmUi4KTKC3yVZHzLkG_dawAISjXfY2Mvg0RGHaZLxw/viewform?usp=sharing"'>Sign Up</button>
-<script>
-    function redirectToGoogleForm() {
-        window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfy7vPqjmUi4KTKC3yVZHzLkG_dawAISjXfY2Mvg0RGHaZLxw/viewform?usp=sharing";
-    }
-</script>

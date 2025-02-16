@@ -16,6 +16,15 @@
             flex-direction: column;
             padding: 20px;
         }
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            border-radius: 50%;border-radius: 50%;
+            position: absolute; top: 0; left: 0;
+            padding-left: 10px;
+            padding-top: 10px;
+        }
         .container {
             background: white;
             padding: 30px;
@@ -81,6 +90,9 @@
     </style>
 </head>
 <body>
+    <div>
+        <img src="images/logo-color.png" alt="Bit by Bit Coding" class="logo">
+    </div>
     <div class="navbar">
         <div class="navbar-links">
             <a class="navbar-link" href="index.html">Home</a>
@@ -149,7 +161,7 @@
                     <div class="nested-list">Date: August 2nd, 2025, Time: 12:00 PM EST - 3:00 PM EST, Judging: 3:00 PM EST - 4:00 PM EST</div>
                 </li>
             </ul>
-            <button class="button" onclick="register()">Register for Hackathons</button>
+            <button class="button" onclick="register()">Register</button>
         </div>
     </div>
     <script>
@@ -158,5 +170,9 @@
             alert("Redirecting to the registration page.");
         }
     </script>
+    <!--<footer>
+        <h5>Questions? Contact us!</h5>
+        <p>bitbybitcoding49@gmail.com</p>
+    </footer>-->
 </body>
 </html>
