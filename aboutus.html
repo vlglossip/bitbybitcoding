@@ -9,18 +9,25 @@
         background-color: #E3F2FD; /* Softer background for readability */
         margin: 0;
         padding: 40px 20px;
-        display: flex;
+        display: grid;
+        grid-template-areas:
+            "header"
+            "team"
+            "mission"
+            "story"
+            "contact";
         justify-content: center;
         align-items: center;
-        flex-direction: column;
     }
 
     .logo {
         width: 100px;
         height: 100px;
         margin-bottom: 20px;
-        border-radius: 50%;border-radius: 50%;
-        position: absolute; top: 0; left: 0;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
         padding-left: 10px;
         padding-top: 10px;
     }
@@ -117,6 +124,73 @@
         padding: 10px;
         width: 100%;
     }
+
+    header {
+        grid-area: header;
+    }
+
+    main {
+        display: grid;
+        grid-template-areas:
+            "team"
+            "mission"
+            "story"
+            "contact";
+        grid-gap: 20px;
+    }
+
+    section {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+
+    .ceo {
+        display: grid;
+        grid-template-columns: 15% 85%;
+        grid-gap: 20px;
+        align-items: center;
+    }
+
+    .ceo img {
+        max-width: 70%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .ceo h3 {
+        margin-top: 0;
+    }
+
+    .ceo h4 {
+        margin-bottom: 0;
+    }
+
+    .ceo p {
+        margin-top: 10px;
+    }
+
+    .ceo p:last-child {
+        margin-bottom: 0;
+    }
+
+    .team {
+        grid-area: team;
+    }
+
+    .mission {
+        grid-area: mission;
+    }
+
+    .story {
+        grid-area: story;
+    }
+
+    .contact {
+        grid-area: contact;
+    }
     </style>
 </head>
 <body>
@@ -136,48 +210,44 @@
         <h1>About Us</h1>
     </header>
     <main>
-        <section>
+        <section class="team">
             <h2>Our Team</h2>
-            <!--img src="images/victoria_glossip.jpeg" alt="Victoria Glossip" style="max-width: 20%; height: auto; border-radius: 50%;"-->
-            <h3>Founder | Chief Executive Officer</h3>
-            <h4>Victoria Glossip</h4>
-            <p>Victoria is a nationally recognized, award-winning advocate for computer science education and holds certifications in computer programming and web development. Her expertise spans Python, Java, SQL, C#, JavaScript, HTML, and CSS. She further fuels her passion for computer science through her role as a Junior Developer Intern at Farragut Systems, Inc. As the published author of the Bit by Bit series, Victoria continues to inspire and support aspiring programmers worldwide.</p>
+            <div class="ceo">
+                <img src="images/victoria_glossip.jpeg" alt="Victoria Glossip">
+                <div>
+                    <h3>Founder | Chief Executive Officer</h3>
+                    <h4>Victoria Glossip</h4>
+                    <p>Victoria is a nationally recognized, award-winning advocate for computer science education and holds certifications in computer programming and web development. Her expertise spans Python, Java, SQL, C#, JavaScript, HTML, and CSS. She further fuels her passion for computer science through her role as a Junior Developer Intern at Farragut Systems, Inc. As the published author of the Bit by Bit series, Victoria continues to inspire and support aspiring programmers worldwide.</p>
+                </div>
+            </div>
         </section>
 
-        <section>
+        <section class="mission">
             <h2>Our Mission</h2>
-            <p>At Bit by Bit Coding, we believe that coding is more than just a technical skill—it’s a tool for empowerment. Our mission is to provide free, high-quality programming education to students worldwide, breaking down barriers of geography, gender, and socioeconomic status.
-
-                We are committed to:
-                
-                Expanding access to coding education through free courses, workshops, and mentorship.
-                Creating inclusive learning opportunities, particularly for young girls in STEM.
-                Offering flexible learning models, including recorded sessions and self-paced programs, to ensure that every student has the opportunity to succeed.
-                Supporting the next generation of leaders by providing guidance in both technical and leadership skills.
-                Technology has the power to change lives, and at Bit by Bit Coding, we are dedicated to making that change a reality—one lesson, one student, and one breakthrough at a time.
-                
-                </p>
+            <p>At Bit by Bit Coding, we believe that coding is more than just a technical skill—it’s a tool for empowerment. Our mission is to provide free, high-quality programming education to students worldwide, breaking down barriers of geography, gender, and socioeconomic status.</p>
+            <ul>
+                <li>Expanding access to coding education through free courses, workshops, and mentorship.</li>
+                <li>Creating inclusive learning opportunities, particularly for young girls in STEM.</li>
+                <li>Offering flexible learning models, including recorded sessions and self-paced programs, to ensure that every student has the opportunity to succeed.</li>
+                <li>Supporting the next generation of leaders by providing guidance in both technical and leadership skills.</li>
+            </ul>
         </section>
 
-        <section>
+        <section class="story">
             <h2>Our Story</h2>
-            <p>Bit by Bit Coding was founded with a simple but powerful goal: to make programming education accessible to all. Our journey began when our founder, an NCWIT Impact Award-winning advocate for computer science, saw firsthand the barriers that prevent students—especially young girls and international learners—from accessing quality coding education.
+            <p>Bit by Bit Coding was founded with a simple but powerful goal: to make programming education accessible to all. Our journey began when our founder, an NCWIT Impact Award-winning advocate for computer science, saw firsthand the barriers that prevent students—especially young girls and international learners—from accessing quality coding education.</p>
+            <p>Starting as a personal mission to bridge this gap, Bit by Bit Coding has grown into a global initiative. From authoring A Girl’s Blueprint to Building Websites to launching a YouTube channel and middle school clubs, our founder has worked tirelessly to empower the next generation of programmers.</p>
+            <p>Through our efforts, we’ve reached over 4,500 individuals, offering free coding lessons and hands-on experiences.</p>
+            <p>Bit by Bit Coding continues to grow, expanding into new initiatives like "Bit by Bit in a Kit," which equips students with the resources to start their own coding clubs. With every lesson taught and every student empowered, we are proving that anyone, anywhere, can learn to code—bit by bit.</p>
+        </section>
 
-                Starting as a personal mission to bridge this gap, Bit by Bit Coding has grown into a global initiative. From authoring A Girl’s Blueprint to Building Websites to launching a YouTube channel and middle school clubs, our founder has worked tirelessly to empower the next generation of programmers.
-                
-                Through our efforts, we’ve reached over 4,500 individuals, offering free coding lessons and hands-on expereinces..
-                
-                Bit by Bit Coding continues to grow, expanding into new initiatives like "Bit by Bit in a Kit," which equips students with the resources to start their own coding clubs. With every lesson taught and every student empowered, we are proving that anyone, anywhere, can learn to code—bit by bit.
-                
-                </p>
+        <section class="contact">
+            <h5>Questions? Contact us!</h5>
+            <p>bitbybitcoding49@gmail.com</p>
+            <a href="https://www.facebook.com/bitbybitcodingwithvictoria" class="social-link">
+                <img src="images/brandlogos/Facebook Brand Asset Pack/Logo/Primary Logo/Facebook_Logo_Primary.png" alt="Facebook" class="social-icon">
+            </a>
         </section>
     </main>
-    <footer>
-        <h5>Questions? Contact us!</h5>
-        <p>bitbybitcoding49@gmail.com</p>
-        <a href="https://www.facebook.com/bitbybitcodingwithvictoria" class="social-link">
-            <img src="images/brandlogos/Facebook Brand Asset Pack/Logo/Primary Logo/Facebook_Logo_Primary.png" alt="Facebook" class="social-icon">
-        </a>
-    </footer>
 </body>
-</html>
+</html></a>
