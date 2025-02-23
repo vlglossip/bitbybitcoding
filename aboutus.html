@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-W878874MBN"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-W878874MBN'); </script>
     <title>About Us</title>
     <link rel="stylesheet" href="styles.css">
@@ -141,39 +142,66 @@
     }
 
     section {
-        background: white;
-        padding: 30px;
+        /*background: white;
         border-radius: 15px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        text-align: left;
+        text-align: left;*/
+        padding: 30px;
     }
 
-    .ceo {
+    .profile {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         display: grid;
-        grid-template-columns: 15% 85%;
-        grid-gap: 20px;
-        align-items: center;
+        /*grid-template-areas: "image" "title" "name" "bio";*/
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;
+        justify-content: center;
+        /*grid-template-columns: 15% 85%;
+        grid-gap: 20px;*/
+        text-align: center;
+        padding: 10px 10px 10px 10px;
     }
 
-    .ceo img {
-        max-width: 70%;
-        height: auto;
+    .profile img {
+        /*grid-area: image;*/
+        grid-row: 1 / 2;
+        grid-column: 2;
+        display: flex;
         border-radius: 50%;
+        display: flex;
+        max-width: 150%;
+        /*max-width: 60%;
+        height: 60%;
+        border-radius: 50%;*/
+    }
+    
+    .profile-details {
+        grid-area: details;
+        grid-row: 2 / 3;
+        grid-column: 1 / 4;
+        text-align: center;
+        padding-left: 20px;
     }
 
-    .ceo h3 {
-        margin-top: 0;
-    }
-
-    .ceo h4 {
+    .profile h3 {
+        grid-area: title;
         margin-bottom: 0;
     }
 
-    .ceo p {
+    .profile h4 {
+        grid-area: name;
+        margin-bottom: 0;
+    }
+
+    .profile p {
+        grid-area: bio;
         margin-top: 10px;
     }
 
-    .ceo p:last-child {
+    .profile p:last-child {
         margin-bottom: 0;
     }
 
@@ -181,16 +209,235 @@
         grid-area: team;
     }
 
+    .bod {        
+        display: grid;
+        grid-template-columns: 15% 30% 10% 30% 15%;
+    }
+
+    .directors {        
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25% 6.25%;
+    }
+
+    .coaches {        
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25% 6.25%;
+    }
+
+    .judges {        
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25% 6.25%;
+    }
+
     .mission {
         grid-area: mission;
+        background: white;
+        border-radius: 15px;
+        margin-left: 6.25%;
+        margin-right: 6.25%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .story {
         grid-area: story;
+        background: white;
+        border-radius: 15px;
+        margin-left: 6.25%;
+        margin-right: 6.25%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .contact {
         grid-area: contact;
+        background: white;
+        border-radius: 15px;
+        margin-left: 6.25%;
+        margin-right: 6.25%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    @media only screen and (max-width: 600px) {
+        body {
+            padding: 20px 10px;
+        }
+
+        .container {
+            width: 100%;
+            padding: 20px;
+        }
+
+        /*.profile img {
+            max-width: 100px;
+        }*/
+
+        .profile-details {
+            padding-left: 10px;
+        }
+
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .navbar-links {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .navbar-link {
+            margin-left: 0;
+            margin-top: 10px;
+        }
+
+        .bod, .directors, .coaches, .judges {
+            grid-template-columns: 1fr;
+        }
+
+        .bod-item-1 {
+            grid-column: 1;
+        }
+
+        .bod-item-2 {
+            grid-column: 1;
+            margin-top: 20px;
+        }
+
+        .dir-item-1 {
+            grid-column: 1;
+        }
+
+        .dir-item-2 {
+            grid-column: 1;
+            margin-top: 20px;
+        }
+
+        .dir-item-3 {
+            grid-column: 1;
+            margin-top: 20px;
+        }
+
+        .coaches-item-1 {
+            grid-column: 1;
+        }
+
+        .coaches-item-2 {
+            grid-column: 1;
+            margin-top: 20px;
+        }
+
+        .coaches-item-3 {
+            grid-column: 1;
+            margin-top: 20px;
+        }
+
+        .judges-item-1 {
+            grid-column: 1;
+        }
+
+        .judges-item-2 {
+            grid-column: 1;
+            margin-top: 20px;
+        }
+
+        .judges-item-3 {
+            grid-column: 1;
+            margin-top: 20px;
+        }
+    }
+
+    @media only screen and (min-width: 600px) {
+        body {
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 90%;
+            padding: 30px;
+        }
+
+        /*.profile img {
+            max-width: 200px;
+        }*/
+
+        .profile-details {
+            padding-left: 20px;
+        }
+
+        .navbar {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .navbar-links {
+            flex-direction: row;
+        }
+
+        .navbar-link {
+            margin-left: 10px;
+        }
+
+        .bod {
+            grid-template-columns: 15% 30% 10% 30% 15%;
+        }
+
+        .bod-item-1 {
+            grid-column: 2;
+        }
+
+        .bod-item-2 {
+            grid-column: 4;
+        }
+
+        .directors {
+            grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25% 6.25%;
+        }
+
+        .dir-item-1 {
+            grid-column: 2;
+        }
+
+        .dir-item-2 {
+            grid-column: 4;
+        }
+
+        .dir-item-3 {
+            grid-column: 6;
+        }
+
+        .coaches {
+            grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25% 6.25%;
+        }
+
+        .coaches-item-1 {
+            grid-column: 2;
+        }
+
+        .coaches-item-2 {
+            grid-column: 4;
+        }
+
+        .coaches-item-3 {
+            grid-column: 6;
+        }
+
+        .judges {
+            grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25% 6.25%;
+        }
+
+        .judges-item-1 {
+            grid-column: 2;
+        }
+
+        .judges-item-2 {
+            grid-column: 4;
+        }
+
+        .judges-item-3 {
+            grid-column: 6;
+        }
     }
     </style>
 </head>
@@ -212,15 +459,143 @@
     </header>
     <main>
         <section class="team">
-            <h2>Our Team</h2>
-            <div class="ceo">
-                <img src="images/victoria_glossip.jpeg" alt="Victoria Glossip">
-                <div>
-                    <h3>Founder | Chief Executive Officer</h3>
-                    <h4>Victoria Glossip</h4>
-                    <p>Victoria is a nationally recognized, award-winning advocate for computer science education and holds certifications in computer programming and web development. Her expertise spans Python, Java, SQL, C#, JavaScript, HTML, and CSS. She further fuels her passion for computer science through her role as a Junior Developer Intern at Farragut Systems, Inc. As the published author of the Bit by Bit series, Victoria continues to inspire and support aspiring programmers worldwide.</p>
+            <h2 style="text-align: center;">Board of Directors</h2>
+            <div class="bod">
+               <div class="profile bod-item-1">
+                   <img src="images/victoria_glossip.jpeg" alt="Victoria Glossip">
+                   <div class="profile-details">
+                       <h3>Founder | Board Chair</h3>
+                       <h4>Victoria Glossip</h4>
+                       <p>Victoria is a nationally recognized, award-winning advocate for computer science education and holds certifications in computer programming and web development. Her expertise spans Python, Java, SQL, C#, JavaScript, HTML, and CSS. She further fuels her passion for computer science through her role as a Junior Developer Intern at Farragut Systems, Inc. As the published author of the Bit by Bit series, Victoria continues to inspire and support aspiring programmers worldwide.</p>
+                   </div>
+               </div>
+               <div class="profile bod-item-2">
+                   <img src="images/taylor_eaton_headshot.jpeg" alt="Taylor Eaton">
+                   <div class="profile-details">
+                       <h3>Chief Executive Officer</h3>
+                       <h4>Taylor Eaton</h4>
+                       <p>Taylor first taught herself arduino code in high school for a science fair project. She holds certifications in artificial intelligence, and her coding languages include Python, Java, and Excel. Her goal is to increase opportunities for young programmers to achieve their own coding dreams and share her interest in coding with them.</p>
+                   </div>
+               </div>
+            </div>
+            <!--<h2 style="text-align: center;">Directors</h2>
+            <div class="directors">
+                <div class="profile dir-item-1">
+                    <img src="images/victoria_glossip.jpeg" alt="Victoria Glossip">
+                    <div class="profile-details">
+                        <h4>Victoria Glossip</h4>
+                        <p>Victoria is a nationally recognized, award-winning advocate for computer science education and holds certifications in computer programming and web development. Her expertise spans Python, Java, SQL, C#, JavaScript, HTML, and CSS. She further fuels her passion for computer science through her role as a Junior Developer Intern at Farragut Systems, Inc. As the published author of the Bit by Bit series, Victoria continues to inspire and support aspiring programmers worldwide.</p>
+                    </div>
+                </div>
+                <div class="profile dir-item-2">
+                    <img src="images/victoria_glossip.jpeg" alt="Victoria Glossip">
+                    <div class="profile-details">
+                        <h4>Victoria Glossip</h4>
+                        <p>Victoria is a nationally recognized, award-winning advocate for computer science education and holds certifications in computer programming and web development. Her expertise spans Python, Java, SQL, C#, JavaScript, HTML, and CSS. She further fuels her passion for computer science through her role as a Junior Developer Intern at Farragut Systems, Inc. As the published author of the Bit by Bit series, Victoria continues to inspire and support aspiring programmers worldwide.</p>
+                    </div>
+                </div>
+                <div class="profile dir-item-3">
+                    <img src="images/victoria_glossip.jpeg" alt="Victoria Glossip">
+                    <div class="profile-details">
+                        <h4>Victoria Glossip</h4>
+                        <p>Victoria is a nationally recognized, award-winning advocate for computer science education and holds certifications in computer programming and web development. Her expertise spans Python, Java, SQL, C#, JavaScript, HTML, and CSS. She further fuels her passion for computer science through her role as a Junior Developer Intern at Farragut Systems, Inc. As the published author of the Bit by Bit series, Victoria continues to inspire and support aspiring programmers worldwide.</p>
+                    </div>
                 </div>
             </div>
+            <h2 style="text-align: center;">Coaches</h2>
+            <div class="coaches">
+                <div class="profile coaches-item-1">
+                    <img src="images/victoria_glossip.jpeg" alt="Victoria Glossip">
+                    <div class="profile-details">
+                        <h4>Victoria Glossip</h4>
+                        <p>Victoria is a nationally recognized, award-winning advocate for computer science education and holds certifications in computer programming and web development. Her expertise spans Python, Java, SQL, C#, JavaScript, HTML, and CSS. She further fuels her passion for computer science through her role as a Junior Developer Intern at Farragut Systems, Inc. As the published author of the Bit by Bit series, Victoria continues to inspire and support aspiring programmers worldwide.</p>
+                    </div>
+                </div>
+                <div class="profile coaches-item-2">
+                    <img src="images/victoria_glossip.jpeg" alt="Victoria Glossip">
+                    <div class="profile-details">
+                        <h4>Victoria Glossip</h4>
+                        <p>Victoria is a nationally recognized, award-winning advocate for computer science education and holds certifications in computer programming and web development. Her expertise spans Python, Java, SQL, C#, JavaScript, HTML, and CSS. She further fuels her passion for computer science through her role as a Junior Developer Intern at Farragut Systems, Inc. As the published author of the Bit by Bit series, Victoria continues to inspire and support aspiring programmers worldwide.</p>
+                    </div>
+                </div>
+                <div class="profile coaches-item-3">
+                    <img src="images/victoria_glossip.jpeg" alt="Victoria Glossip">
+                    <div class="profile-details">
+                        <h4>Victoria Glossip</h4>
+                        <p>Victoria is a nationally recognized, award-winning advocate for computer science education and holds certifications in computer programming and web development. Her expertise spans Python, Java, SQL, C#, JavaScript, HTML, and CSS. She further fuels her passion for computer science through her role as a Junior Developer Intern at Farragut Systems, Inc. As the published author of the Bit by Bit series, Victoria continues to inspire and support aspiring programmers worldwide.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="coaches">
+                <div class="profile coaches-item-1">
+                    <img src="images/victoria_glossip.jpeg" alt="Victoria Glossip">
+                    <div class="profile-details">
+                        <h4>Victoria Glossip</h4>
+                        <p>Victoria is a nationally recognized, award-winning advocate for computer science education and holds certifications in computer programming and web development. Her expertise spans Python, Java, SQL, C#, JavaScript, HTML, and CSS. She further fuels her passion for computer science through her role as a Junior Developer Intern at Farragut Systems, Inc. As the published author of the Bit by Bit series, Victoria continues to inspire and support aspiring programmers worldwide.</p>
+                    </div>
+                </div>
+                <div class="profile coaches-item-2">
+                    <img src="images/victoria_glossip.jpeg" alt="Victoria Glossip">
+                    <div class="profile-details">
+                        <h4>Victoria Glossip</h4>
+                        <p>Victoria is a nationally recognized, award-winning advocate for computer science education and holds certifications in computer programming and web development. Her expertise spans Python, Java, SQL, C#, JavaScript, HTML, and CSS. She further fuels her passion for computer science through her role as a Junior Developer Intern at Farragut Systems, Inc. As the published author of the Bit by Bit series, Victoria continues to inspire and support aspiring programmers worldwide.</p>
+                    </div>
+                </div>
+                <div class="profile coaches-item-3">
+                    <img src="images/victoria_glossip.jpeg" alt="Victoria Glossip">
+                    <div class="profile-details">
+                        <h4>Victoria Glossip</h4>
+                        <p>Victoria is a nationally recognized, award-winning advocate for computer science education and holds certifications in computer programming and web development. Her expertise spans Python, Java, SQL, C#, JavaScript, HTML, and CSS. She further fuels her passion for computer science through her role as a Junior Developer Intern at Farragut Systems, Inc. As the published author of the Bit by Bit series, Victoria continues to inspire and support aspiring programmers worldwide.</p>
+                    </div>
+                </div>
+            </div>
+            <h2 style="text-align: center;">Judges</h2>
+            <div class="coaches">
+                <div class="profile judges-item-1">
+                    <img src="images/victoria_glossip.jpeg" alt="Victoria Glossip">
+                    <div class="profile-details">
+                        <h4>Victoria Glossip</h4>
+                        <p>Victoria is a nationally recognized, award-winning advocate for computer science education and holds certifications in computer programming and web development. Her expertise spans Python, Java, SQL, C#, JavaScript, HTML, and CSS. She further fuels her passion for computer science through her role as a Junior Developer Intern at Farragut Systems, Inc. As the published author of the Bit by Bit series, Victoria continues to inspire and support aspiring programmers worldwide.</p>
+                    </div>
+                </div>
+                <div class="profile judges-item-2">
+                    <img src="images/victoria_glossip.jpeg" alt="Victoria Glossip">
+                    <div class="profile-details">
+                        <h4>Victoria Glossip</h4>
+                        <p>Victoria is a nationally recognized, award-winning advocate for computer science education and holds certifications in computer programming and web development. Her expertise spans Python, Java, SQL, C#, JavaScript, HTML, and CSS. She further fuels her passion for computer science through her role as a Junior Developer Intern at Farragut Systems, Inc. As the published author of the Bit by Bit series, Victoria continues to inspire and support aspiring programmers worldwide.</p>
+                    </div>
+                </div>
+                <div class="profile judges-item-3">
+                    <img src="images/victoria_glossip.jpeg" alt="Victoria Glossip">
+                    <div class="profile-details">
+                        <h4>Victoria Glossip</h4>
+                        <p>Victoria is a nationally recognized, award-winning advocate for computer science education and holds certifications in computer programming and web development. Her expertise spans Python, Java, SQL, C#, JavaScript, HTML, and CSS. She further fuels her passion for computer science through her role as a Junior Developer Intern at Farragut Systems, Inc. As the published author of the Bit by Bit series, Victoria continues to inspire and support aspiring programmers worldwide.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="coaches">
+                <div class="profile judges-item-1">
+                    <img src="images/victoria_glossip.jpeg" alt="Victoria Glossip">
+                    <div class="profile-details">
+                        <h4>Victoria Glossip</h4>
+                        <p>Victoria is a nationally recognized, award-winning advocate for computer science education and holds certifications in computer programming and web development. Her expertise spans Python, Java, SQL, C#, JavaScript, HTML, and CSS. She further fuels her passion for computer science through her role as a Junior Developer Intern at Farragut Systems, Inc. As the published author of the Bit by Bit series, Victoria continues to inspire and support aspiring programmers worldwide.</p>
+                    </div>
+                </div>
+                <div class="profile judges-item-2">
+                    <img src="images/victoria_glossip.jpeg" alt="Victoria Glossip">
+                    <div class="profile-details">
+                        <h4>Victoria Glossip</h4>
+                        <p>Victoria is a nationally recognized, award-winning advocate for computer science education and holds certifications in computer programming and web development. Her expertise spans Python, Java, SQL, C#, JavaScript, HTML, and CSS. She further fuels her passion for computer science through her role as a Junior Developer Intern at Farragut Systems, Inc. As the published author of the Bit by Bit series, Victoria continues to inspire and support aspiring programmers worldwide.</p>
+                    </div>
+                </div>
+                <div class="profile judges-item-3">
+                    <img src="images/victoria_glossip.jpeg" alt="Victoria Glossip">
+                    <div class="profile-details">
+                        <h4>Victoria Glossip</h4>
+                        <p>Victoria is a nationally recognized, award-winning advocate for computer science education and holds certifications in computer programming and web development. Her expertise spans Python, Java, SQL, C#, JavaScript, HTML, and CSS. She further fuels her passion for computer science through her role as a Junior Developer Intern at Farragut Systems, Inc. As the published author of the Bit by Bit series, Victoria continues to inspire and support aspiring programmers worldwide.</p>
+                    </div>
+                </div>
+            </div-->
         </section>
 
         <section class="mission">
