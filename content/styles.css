@@ -1,0 +1,530 @@
+/*
+   Logo
+*/
+
+.logo {
+   width: 100px;
+   height: 100px;
+   margin-bottom: 20px;
+   border-radius: 50%;border-radius: 50%;
+   position: absolute; top: 0; left: 0;
+   padding-left: 10px;
+   padding-top: 10px;
+}
+
+/*
+   Navbar
+*/
+
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #4A7D96;
+   padding: 10px 20px;
+   color: white;
+}
+.navbar-brand {
+   font-size: 1.2rem;
+   font-weight: bold;
+}
+.navbar-links {
+   display: flex;
+}
+.navbar-link {
+   margin-left: 10px;
+   color: white;
+   text-decoration: none;
+}
+.navbar-link:hover {
+   text-decoration: underline;
+}
+
+/*
+   Headings
+*/
+
+h1 {
+   color: #4A7D96;
+   font-size: 1.8rem;
+   margin-bottom: 10px;
+}
+
+h2 {
+    color: #356074;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+/*
+   Lists
+*/
+
+ul {
+   list-style-type: none;
+   padding: 0;
+   text-align: left;
+}
+li {
+   background: #4A7D96;
+   color: white;
+   padding: 10px;
+   margin: 10px 0;
+   border-radius: 10px;
+   font-size: 1rem;
+}
+.nested-list {
+   background: #E3F2FD;
+   color: #333;
+   padding: 8px;
+   margin-top: 5px;
+   border-radius: 8px;
+   font-size: 0.9rem;
+}
+
+/*
+   Buttons
+*/
+
+.button {
+   background-color: #4A7D96;
+   color: white;
+   padding: 12px 20px;
+   border-radius: 10px;
+   text-decoration: none;
+   font-weight: bold;
+   display: inline-block;
+   margin-top: 20px;
+   transition: background 0.3s ease;
+   border: none;
+   cursor: pointer;
+}
+
+.button:hover {
+   background-color: #356074;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+/*
+   Base body
+*/
+
+body {
+   font-family: 'Arial', sans-serif;
+   background-color: #A1C9DF;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.body-volunteers {
+   background-color: #E3F2FD; /* Softer background for readability */
+   padding: 20px 20px;
+}
+
+
+/*
+   Base container classes
+*/
+
+.grid-container {
+   display: grid;
+   grid-gap: 20px;
+   padding-top: 60px;
+}
+
+.container {
+   background: white;
+   padding: 30px;
+   border-radius: 20px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   text-align: center;
+   max-width: 90%;
+}
+
+/*
+   Courses classes
+*/
+
+.grid-container-courses {
+   grid-template-columns: 1fr 1fr;
+}
+
+/*
+   Hackathon classes
+*/
+
+.grid-container-hackathon {
+   grid-template-columns: 1fr 1fr;
+}
+
+/*
+   About Us classes
+*/
+
+main {
+   display: grid;
+   grid-template-areas:
+       "team"
+       "mission"
+       "story"
+       "contact";
+   grid-gap: 20px;
+}
+
+section {
+   /*background: white;
+   border-radius: 15px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   text-align: left;*/
+   padding: 30px;
+}
+
+.profile {
+   background: white;
+   border-radius: 15px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   display: grid;
+   /*grid-template-areas: "image" "title" "name" "bio";*/
+   grid-template-rows: auto auto;
+   grid-template-columns: 1fr 1fr 1fr;
+   place-items: center;
+   justify-content: center;
+   /*grid-template-columns: 15% 85%;
+   grid-gap: 20px;*/
+   text-align: center;
+   padding: 10px 10px 10px 10px;
+}
+
+.profile img {
+    /*grid-area: image;*/
+    grid-row: 1 / 2;
+    grid-column: 2;
+    display: flex;
+    border-radius: 50%;
+    display: flex;
+    max-width: 150%;
+    /*max-width: 60%;
+    height: 60%;
+    border-radius: 50%;*/
+}
+
+.profile-details {
+    grid-area: details;
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+    text-align: center;
+    padding-left: 20px;
+}
+
+.profile h3 {
+    grid-area: title;
+    margin-bottom: 0;
+}
+
+.profile h4 {
+    grid-area: name;
+    margin-bottom: 0;
+}
+
+.profile p {
+    grid-area: bio;
+    margin-top: 10px;
+}
+
+.profile p:last-child {
+    margin-bottom: 0;
+}
+
+.team {
+    grid-area: team;
+}
+
+.team h2 {
+   text-align: center;
+}
+
+.bod {        
+    display: grid;
+    grid-template-columns: 15% 30% 10% 30% 15%;
+}
+
+.directors {        
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25% 6.25%;
+}
+
+.coaches {        
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25% 6.25%;
+}
+
+.judges {        
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25% 6.25%;
+}
+
+.mission {
+    grid-area: mission;
+    background: white;
+    border-radius: 15px;
+    margin-left: 6.25%;
+    margin-right: 6.25%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mission li {
+   background: #A1C9DF;
+   color: #333;
+   padding: 10px;
+   margin: 5px 0;
+   border-radius: 8px;
+   font-size: 1rem;
+}
+
+.story {
+    grid-area: story;
+    background: white;
+    border-radius: 15px;
+    margin-left: 6.25%;
+    margin-right: 6.25%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact {
+    grid-area: contact;
+    background: white;
+    border-radius: 15px;
+    margin-left: 6.25%;
+    margin-right: 6.25%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*
+   FAQ classes
+*/
+
+.faq {
+   max-width: 60%;
+   margin: 50px auto;
+   padding: 20px;
+   background-color: #ffffff;
+   border-radius: 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq h1 {
+   font-size: 32px;
+   color: #333333;
+   margin-bottom: 20px;
+}
+
+.faq h2 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.faq p {
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.question {
+    margin-bottom: 30px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+   .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+   }
+
+  .navbar-links {
+      flex-direction: column;
+      width: 100%;
+   }
+
+   .navbar-link {
+      margin-left: 0;
+      margin-top: 10px;
+   }
+
+   .grid-container-courses {
+      grid-template-columns: 1fr;
+   }
+
+   .grid-container-hackathon {
+      grid-template-columns: 1fr;
+   }
+
+   .profile-details {
+       padding-left: 10px;
+   }
+   
+   .bod, .directors, .coaches, .judges {
+      grid-template-columns: 1fr;
+   }
+
+   .bod-item-1 {
+      grid-column: 1;
+   }
+
+   .bod-item-2 {
+      grid-column: 1;
+      margin-top: 20px;
+   }
+
+   .dir-item-1 {
+      grid-column: 1;
+   }
+
+   .dir-item-2 {
+      grid-column: 1;
+      margin-top: 20px;
+   }
+
+   .dir-item-3 {
+      grid-column: 1;
+      margin-top: 20px;
+   }
+
+   .coaches-item-1 {
+      grid-column: 1;
+   }
+
+   .coaches-item-2 {
+      grid-column: 1;
+      margin-top: 20px;
+   }
+
+   .coaches-item-3 {
+      grid-column: 1;
+      margin-top: 20px;
+   }
+
+   .judges-item-1 {
+      grid-column: 1;
+   }
+
+   .judges-item-2 {
+      grid-column: 1;
+      margin-top: 20px;
+   }
+
+   .judges-item-3 {
+      grid-column: 1;
+      margin-top: 20px;
+   }
+
+}
+
+
+@media only screen and (min-width: 600px) {
+
+   .navbar {
+      flex-direction: row;
+      align-items: center;
+   }
+
+   .navbar-links {
+      flex-direction: row;
+   }
+
+   .navbar-link {
+      margin-left: 10px;
+   }
+
+   .grid-container-courses {
+      grid-template-columns: 1fr 1fr;
+   }
+
+   .grid-container-hackathon {
+      grid-template-columns: 1fr 1fr;
+   }
+   
+   .profile-details {
+      padding-left: 20px;
+   }
+
+   .bod {
+       grid-template-columns: 15% 30% 10% 30% 15%;
+   }
+
+   .bod-item-1 {
+       grid-column: 2;
+   }
+
+   .bod-item-2 {
+       grid-column: 4;
+   }
+
+   .directors {
+       grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25% 6.25%;
+   }
+
+   .dir-item-1 {
+       grid-column: 2;
+   }
+
+   .dir-item-2 {
+       grid-column: 4;
+   }
+
+   .dir-item-3 {
+       grid-column: 6;
+   }
+
+   .coaches {
+       grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25% 6.25%;
+   }
+
+   .coaches-item-1 {
+       grid-column: 2;
+   }
+
+   .coaches-item-2 {
+       grid-column: 4;
+   }
+
+   .coaches-item-3 {
+       grid-column: 6;
+   }
+
+   .judges {
+       grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25% 6.25%;
+   }
+
+   .judges-item-1 {
+       grid-column: 2;
+   }
+
+   .judges-item-2 {
+       grid-column: 4;
+   }
+
+   .judges-item-3 {
+       grid-column: 6;
+   }
+}
