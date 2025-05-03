@@ -200,9 +200,10 @@ section {
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
    display: grid;
    /*grid-template-areas: "image" "title" "name" "bio";*/
-   grid-template-rows: 1fr 1fr;
+   /*grid-template-rows: 1fr 1fr;*/
    grid-template-columns: 1fr 1fr 1fr;
-   place-items: start center;
+   grid-auto-rows: max-content;
+   place-items: center;
    justify-content: center;
    /*grid-template-columns: 15% 85%;
    grid-gap: 20px;*/
@@ -218,6 +219,7 @@ section {
     border-radius: 50%;
     display: flex;
     max-width: 150%;
+    aspect-ratio: 0.75;
     /*max-width: 60%;
     height: 60%;
     border-radius: 50%;*/
@@ -272,13 +274,15 @@ section {
 .coaches {        
     margin-top: 30px;
     display: grid;
-    grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25% 6.25%;
+    /*grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25% 6.25%;*/
+    grid-template-columns: 4% 20% 4% 20% 4% 20% 4% 20% 4%;
 }
 
 .judges {        
     margin-top: 30px;
     display: grid;
-    grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25% 6.25%;
+    /*grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25% 6.25%;*/
+    grid-template-columns: 4% 20% 4% 20% 4% 20% 4% 20% 4%;
 }
 
 .mission {
@@ -424,6 +428,11 @@ section {
       margin-top: 20px;
    }
 
+   .coaches-item-4 {
+      grid-column: 1;
+      margin-top: 20px;
+   }
+
    .judges-item-1 {
       grid-column: 1;
    }
@@ -438,10 +447,15 @@ section {
       margin-top: 20px;
    }
 
+   .judges-item-4 {
+      grid-column: 1;
+      margin-top: 20px;
+   }
+
 }
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 601px) {
 
    .navbar {
       flex-direction: row;
@@ -496,8 +510,8 @@ section {
        grid-column: 6;
    }
 
-   .coaches {
-       grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25% 6.25%;
+   .coaches, .judges {       
+       grid-template-columns: 15% 30% 10% 30% 15%;
    }
 
    .coaches-item-1 {
@@ -509,11 +523,13 @@ section {
    }
 
    .coaches-item-3 {
-       grid-column: 6;
+       grid-column: 2;
+       margin-top: 20px;
    }
 
-   .judges {
-       grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25% 6.25%;
+   .coaches-item-4 {
+      grid-column: 4;
+      margin-top: 20px;
    }
 
    .judges-item-1 {
@@ -525,6 +541,41 @@ section {
    }
 
    .judges-item-3 {
-       grid-column: 6;
+       grid-column: 2;
+       margin-top: 20px;
    }
+
+   .judges-item-4 {
+      grid-column: 4;
+      margin-top: 20px;
+   }
+}
+
+@media only screen and (min-width: 1001px) {
+
+   .coaches, .judges {
+       
+      /*grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25% 6.25%;*/
+      grid-template-columns: 4% 20% 4% 20% 4% 20% 4% 20% 4%;
+     }
+
+     .coaches-item-3 {
+         grid-column: 6;
+         margin-top: 0px;
+     }
+
+     .coaches-item-4 {
+         grid-column: 8;
+         margin-top: 0px;
+     }
+
+     .judges-item-3 {
+         grid-column: 6;
+         margin-top: 0px;
+     }
+
+     .judges-item-4 {
+         grid-column: 8;
+         margin-top: 0px;
+     }
 }
