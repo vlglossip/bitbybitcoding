@@ -1,0 +1,116 @@
+body {
+   background-color: #A1C9DF;   
+}
+.main-container {
+   font-family: 'Arial', sans-serif;
+   display: grid;
+   grid-auto-rows: max-content;
+}
+.logo {
+   width: 100px;
+   height: 100px;
+   margin-bottom: 20px;
+   border-radius: 50%;border-radius: 50%;
+   position: absolute; top: 0; left: 0;
+   padding-left: 10px;
+   padding-top: 10px;
+}
+
+.stats-section {
+   padding: 40px 20px 20px 20px;
+   text-align: center;
+   font-family: sans-serif;
+   grid-row: 1;
+   display: grid;
+   grid-template-rows: 1fr;
+   grid-template-columns: 20% 60% 20%;
+}
+.stats-container {
+   grid-column: 2;
+   display: grid;
+   grid-template-rows: 1fr 1fr 1fr;
+   grid-template-columns: 1fr;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+.stat-box {
+   min-width: 150px;
+}
+.stat-number {
+   font-size: 2em;
+   font-weight: bold;
+   color: #356074;
+}
+.stat-label {
+   font-size: 1em;
+   color: #333;
+}
+
+.container {
+   grid-row: 2;
+   background: white;
+   padding: 30px;
+   border-radius: 20px;
+   border-color: black;
+   border-style: solid;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   text-align: center;
+   /*width: 80%;
+   max-width: 500px;
+   top: 90%;
+   left: 50%;
+   transform: translate(-50%, -50%);*/
+}
+h1 {
+   color: #4A7D96;
+   font-size: 2rem;
+}
+p {
+   color: #666;
+   font-size: 1rem;
+}
+.button {
+   background-color: #4A7D96;
+   color: white;
+   padding: 10px 20px;
+   border-radius: 10px;
+   text-decoration: none;
+   font-weight: bold;
+   display: inline-block;
+   margin-top: 20px;
+   transition: background 0.3s ease;
+}
+.button:hover {
+   background-color: #356074;
+}
+
+#chatbot-box {
+   grid-row: 3;
+   background: white;
+   margin-top: 20px;
+   padding: 10px;
+   border-radius: 12px;
+   text-align: center;
+   max-height: 400px;
+   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+   font-family: sans-serif;
+   overflow-y: auto;
+}
+#chatbot-input {
+   width: 90%;
+   padding: 5px;
+   border: 1px solid #ccc;
+   margin-top: 10px;
+}
+
+footer {
+   grid-row: 4;
+   padding: 10px;
+   width: 100%;
+}
+
+.social-icon {
+   width: 50px;
+   height: 50px;
+   margin: 10px;
+}

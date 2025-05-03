@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W878874MBN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-W878874MBN');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="description" content="Bit by Bit Coding empowers users with interactive coding courses for all skill levels. Through hands-on projects and real-world applications, we make programming accessible, engaging, and impactful.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="content/index.css">
+    <link rel="stylesheet" href="content/wavyline.css">
+    <title>Bit by Bit Coding</title>
+</head>
+<body>
+    <div class="wave-container"> 
+        <div>
+            <img src="images/logo-color.png" alt="Bit by Bit Coding" class="logo">
+        </div>
+        <div class="container">
+            <h1>Welcome to Bit by Bit</h1>
+            <p>Igniting interest in coding worldwide.</p>
+            <a href="courses.html" class="button">Courses</a>
+            <a href="hackathons.html" class="button">Hackathons</a>
+            <a href="workwithus.html" class="button">Work With Us</a>
+            <a href="aboutus.html" class="button">About Us</a>
+            <a href="faq.html" class="button">FAQ</a>
+        </div>
+
+        <!-- NEW STATS SECTION -->
+        <div class="stats-section">
+            <div class="stats-container">
+                <div class="stat-box">
+                    <div class="stat-number">17</div>
+                    <div class="stat-label">Countries</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">378</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <!--<div class="stat-box">
+                    <div class="stat-number">10,000+</div>
+                    <div class="stat-label">Students</div>
+                </div>-->
+                <div class="stat-box">
+                    <div class="stat-number">22</div>
+                    <div class="stat-label">Volunteers</div>
+                </div>
+            </div>
+        </div>
+        <!-- END STATS SECTION -->
+
+        <footer>
+            <h5>Questions? Contact us!</h5>
+            <p>bitbybitcoding49@gmail.com</p>
+            <a href="https://www.facebook.com/bitbybitcodingwithvictoria" class="social-link">
+                <img src="images/brandlogos/Facebook Brand Asset Pack/Logo/Primary Logo/Facebook_Logo_Primary.png" alt="Facebook" class="social-icon">
+            </a>
+            <script type="text/javascript">
+                gnp_url = 'bit-by-bit-coding-1';gnp_num = '4';
+            </script>
+            <script type="text/javascript">
+                (function() {
+                    document.write('<iframe class="resp_iframe" src="https://greatnonprofits.org/badge/mini_' + gnp_num + '_new/' + gnp_url + '" width="124" height="72" frameborder="0" scrolling="no"></iframe>');
+                })()
+            </script>
+            <noscript> 
+                <a href="https://greatnonprofits.org/org/bit-by-bit-coding-1/?badge=1">
+                    <img alt="Review Bit by Bit Coding on Great Nonprofits" 
+                        title="Review Bit by Bit Coding on Great Nonprofits" 
+                        src="//cdn.greatnonprofits.org/images/great-nonprofits.gif?id=997664190"> 
+                </a>
+            </noscript>
+        </footer>
+    </div>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-box">
+        <div id="chatbot-output">Hi! I'm your Bit by Bit Chatbot. Ask me about our classes or site navigation.</div>
+        <input type="text" id="chatbot-input" placeholder="Type your message...">
+    </div>
+
+    <script>
+        const output = document.getElementById('chatbot-output');
+        const input = document.getElementById('chatbot-input');
+
+        let step = 0;
+        let experience = "";
+        let comfort = "";
+
+        const scrollToBottom = () => {
+            output.scrollTop = output.scrollHeight;
+        };
+
+        const printBot = (message) => {
+            output.innerHTML += `<br>BitBot: ${message}`;
+            scrollToBottom();
+        };
+
+        const printUser = (text) => {
+            output.innerHTML += `<br><b>You:</b> ${text}`;
+        };
+
+        const resetChat = () => {
+            step = 0;
+            experience = "";
+            comfort = "";
+        };
+
+        input.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                const userText = input.value.trim();
+                printUser(userText);
+                input.value = '';
+
+                if (userText.toLowerCase() === "exit") {
+                    printBot("Bye! Come back if you have more questions.");
+                    resetChat();
+                    return;
+                }
+
+                if (step === 0) {
+                    if (/class|recommend/i.test(userText)) {
+                        printBot("What kind of experience do you have with coding? (e.g., HTML, CSS, JavaScript)");
+                        step = 1;
+                    } else if (/about|mission/i.test(userText)) {
+                        printBot(`Learn more on our About Us page: <a href="aboutus.html">About Us</a>`);
+                    } else if (/volunteer|help|sign up/i.test(userText)) {
+                        printBot(`Interested in helping out? Check our Work With Us page: <a href="workwithus.html">Work With Us</a>`);
+                    } else if (/time|schedule|when/i.test(userText)) {
+                        printBot("Classes run from 10 AM to 1 PM, depending on the course.");
+                    } else if (/bye|goodbye/i.test(userText)) {
+                        printBot("Bye! Come back if you have more questions.");
+                        resetChat();
+                    } else {
+                        printBot("I'm not sure how to help with that. Try asking about classes or our site.");
+                    }
+                } else if (step === 1) {
+                    const lowerText = userText.toLowerCase();
+                    if (lowerText.includes("html") || lowerText.includes("css") || lowerText.includes("javascript")) {
+                        experience = lowerText;
+                        printBot("Got it. And how comfortable are you with that experience (very, somewhat, or not at all)?");
+                        step = 2;
+                    } else {
+                        printBot("Hmm… Try mentioning languages like JavaScript, HTML, or CSS so I know what you're talking about.");
+                    }
+                } else if (step === 2) {
+                    const lowerText = userText.toLowerCase();
+                    if (lowerText.includes("very") || lowerText.includes("somewhat") || lowerText.includes("not")) {
+                        comfort = lowerText;
+
+                        let track = "WEB DEV";
+                        let score = 0;
+
+                        if (experience.includes("javascript")) {
+                            track = "APP DEV";
+                            score += 2;
+                        } else if (experience.includes("html") || experience.includes("css")) {
+                            score += 1;
+                        }
+
+                        if (comfort.includes("very")) score += 2;
+                        else if (comfort.includes("somewhat")) score += 1;
+
+                        let level = "BEGINNER";
+                        let classTime = "10:00 AM – 11:00 AM";
+                        let classCode = "WDP";
+
+                        if (score === 3) {
+                            level = "INTERMEDIATE";
+                            classTime = "11:00 AM – 12:00 PM";
+                            classCode = track === "APP DEV" ? "ADI" : "WDI";
+                        } else if (score >= 4) {
+                            level = "ADVANCED";
+                            classTime = "12:00 PM – 1:00 PM";
+                            classCode = track === "APP DEV" ? "ADA" : "WDA";
+                        } else {
+                            classCode = track === "APP DEV" ? "ADB" : "WDB";
+                        }
+
+                        printBot("Processing your response...");
+                        setTimeout(() => {
+                            printBot(`Based on what you said, you’d be great for our ${track} track at the ${level} level.`);
+                            printBot(`Your recommended class is: ${classCode} from ${classTime}.`);
+                            resetChat();
+                        }, 1000);
+                    } else {
+                        printBot("Please answer with something like 'very', 'somewhat', or 'not at all'.");
+                    }
+                }
+            }
+        });
+    </script>
+
+    <div class="bottom"></div>
+</body>
+</html>
