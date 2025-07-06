@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-W878874MBN"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-W878874MBN'); </script>
     <meta charset="UTF-8">
     <meta name="description" content="Unleash your creativity at Bit by Bit Coding's hackathons! Team up with passionate coders, tackle challenges, and elevate your skills. Join us for an inspiring coding journey">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="content/styles.css">
     <title>Hackathons - Bit by Bit</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W878874MBN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-W878874MBN');
+    </script>
 </head>
 <body>
     <div>
@@ -14,7 +22,8 @@
             <img src="images/logo-color.png" alt="Bit by Bit Coding" class="logo">
         </a>
     </div>
-    <div class="navbar">
+    
+    <nav class="navbar">
         <div class="navbar-links">
             <a class="navbar-link" href="index.html">Home</a>
             <a class="navbar-link" href="courses.html">Courses</a>
@@ -23,82 +32,41 @@
             <a class="navbar-link" href="aboutus.html">About Us</a>
             <a class="navbar-link" href="faq.html">FAQ</a>
         </div>
-    </div>
+    </nav>
+    
     <div class="grid-container grid-container-hackathon">
-        <!-- Current Hackathons 
-        <div class="container">
-            <h1>Current Hackathons</h1>
-            <h2>Web Development Hackathons</h2>
-            <ul>
-                <li>Web Dev Hackathon
-                    <div class="nested-list">Date: April 26th, 2025, Time: 12:00 PM Eastern Time - 3:00 PM Eastern Time, Judging: 3:00 PM Eastern Time - 4:00 PM Eastern Time</div>
-                </li>
-            </ul>
-            <h2>App Development Hackathons</h2>
-            <ul>
-                <li>App Dev Hackathon
-                    <div class="nested-list">Date: April 26th, 2025, Time: 12:00 PM Eastern Time - 3:00 PM Eastern Time, Judging: 3:00 PM Eastern Time - 4:00 PM Eastern Time</div>
-                </li>
-            </ul>
-            <button class="button" onclick="register()">Register for Hackathons</button>
-        </div>-->
-
         <!-- Current Hackathons -->
         <div class="container">
             <h1>Summer 2025 Hackathons</h1>
-            <h2>Web Development Hackathons</h2>
             <ul>
                 <li>Web Dev Hackathon
-                    <div class="nested-list">Date: August 2nd, 2025, Time: 12:00 PM Eastern Time - 3:00 PM Eastern Time, Judging: 3:00 PM Eastern Time - 4:00 PM Eastern Time</div>
+                    <div class="nested-list">Date: August 2nd, 2025, Time: 12:00 PM Eastern Time - 3:00 PM Eastern Time</div>
+                </li>
+                <li>App Dev Hackathon
+                    <div class="nested-list">Date: August 2nd, 2025, Time: 12:00 PM Eastern Time - 3:00 PM Eastern Time</div>
                 </li>
             </ul>
-            <h2>App Development Hackathons</h2>
+            <p>Registration Closed</p>
+        </div>
+
+        <!-- Upcoming Hackathons -->
+        <div class="container">
+            <h1>Fall 2025 Hackathons</h1>
             <ul>
-                <li>App Dev Hackathon
-                    <div class="nested-list">Date: August 2nd, 2025, Time: 12:00 PM Eastern Time - 3:00 PM Eastern Time, Judging: 3:00 PM Eastern Time - 4:00 PM Eastern Time</div>
+                <li>Fall 2025 Session A Hackathon
+                    <div class="nested-list">Date: October 18th, 2025, Time: 12:00 PM Eastern Time - 3:00 PM Eastern Time</div>
+                </li>
+                <li>Fall 2025 Session B Hackathon
+                    <div class="nested-list">Date: November 22nd, 2025, Time: 12:00 PM Eastern Time - 3:00 PM Eastern Time</div>
                 </li>
             </ul>
             <button class="button" onclick="register()">Register</button>
+                <script>
+                    function register() {
+                        window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLScrI4yertFJtbNOex9eocFzFvAkjxOtI8MPNUry_3YLPS9GBA/viewform?usp=dialog";
+                    }
+                </script>
         </div>
-    <script>
-        function register() {
-            window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfJNMaleVGdWsgeikMl2jUZK4qEa0ghphVqsAoSCTYBn4H6VA/viewform?usp=dialog";
-        }
-    </script>
-    <!-- Upcoming Hackathons -->
-    <div class="container">
-        <h1>Fall 2025 Hackathons</h1>
-        <h2>Web Development Hackathons</h2>
-        <ul>
-            <li>Web Dev Mid-Session Hackathon
-                <div class="nested-list">Date: October 18th, 2025, Time: 12:00 PM Eastern Time - 3:00 PM Eastern Time, Judging: 3:00 PM Eastern Time - 4:00 PM Eastern Time</div>
-            </li>
-            <li>Web Dev End of Session Hackathon
-                <div class="nested-list">Date: November 22nd, 2025, Time: 12:00 PM Eastern Time - 3:00 PM Eastern Time, Judging: 3:00 PM Eastern Time - 4:00 PM Eastern Time</div>
-            </li>
-        </ul>
-        <h2>App Development Hackathons</h2>
-        <ul>
-            <li>App Dev Mid-Session Hackathon
-                <div class="nested-list">Date: October 18th, 2025, Time: 12:00 PM Eastern Time - 3:00 PM Eastern Time, Judging: 3:00 PM Eastern Time - 4:00 PM Eastern Time</div>
-            </li>
-            <li>Web Dev End of Session Hackathon
-                <div class="nested-list">Date: November 22nd, 2025, Time: 12:00 PM Eastern Time - 3:00 PM Eastern Time, Judging: 3:00 PM Eastern Time - 4:00 PM Eastern Time</div>
-            </li>
-        </ul>
-        <p>Registration opens 8/9</p>
-        <!--<button class="button" onclick="register()">Registration opens 8/9</button>
     </div>
-    </div>
-</div>
-<script>
-    function register() {
-        window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfJNMaleVGdWsgeikMl2jUZK4qEa0ghphVqsAoSCTYBn4H6VA/viewform?usp=dialog";
-    }
-</script>-->
-    <!--<footer>
-        <h5>Questions? Contact us!</h5>
-        <p>bitbybitcoding49@gmail.com</p>
-    </footer>-->
 </body>
 </html>
