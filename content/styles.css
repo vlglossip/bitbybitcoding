@@ -173,6 +173,22 @@ body {
 }
 
 /*
+   Student Hub classes
+*/
+
+.student-hub {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 20px;
+}
+
+.student-hub-item {
+   padding: 20px;
+   border: 5px solid #4A7D96;
+   border-radius: 15px;
+}
+
+/*
    About Us classes
 */
 
@@ -375,6 +391,10 @@ section {
       margin-top: 10px;
    }
 
+   .student-hub {
+      grid-template-columns: 1fr;
+   }
+
    .grid-container-courses {
       grid-template-columns: 1fr;
    }
@@ -468,6 +488,10 @@ section {
 
    .navbar-link {
       margin-left: 10px;
+   }
+
+   .student-hub {
+      grid-template-columns: 1fr 1fr;
    }
 
    .grid-container-courses {
