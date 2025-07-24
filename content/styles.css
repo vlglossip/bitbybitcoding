@@ -178,7 +178,7 @@ body {
 
 .student-hub {
    display: grid;
-   grid-template-columns: 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr;
    gap: 20px;
 }
 
@@ -491,7 +491,7 @@ section {
    }
 
    .student-hub {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
    }
 
    .grid-container-courses {
@@ -524,7 +524,7 @@ section {
 
    .dir-item-1 {
        grid-column: 2;
-   }
+   } 
 
    .dir-item-2 {
        grid-column: 4;
