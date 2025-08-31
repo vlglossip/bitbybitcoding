@@ -29,11 +29,12 @@ body {
    grid-column: 2;
    display: grid;
    grid-template-rows: 1fr 1fr 1fr;
-   grid-template-columns: 1fr;
+   grid-template-columns: 1fr 1fr;
    justify-content: center;
    flex-wrap: wrap;
 }
 .stat-box {
+   padding-top: 10px;
    min-width: 150px;
 }
 .stat-number {
