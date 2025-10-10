@@ -30,7 +30,7 @@ body {
    width: 80%;
    max-width: 500px;
    position: absolute;
-   top: 90%;
+   top: 115%;
    left: 50%;
    transform: translate(-50%, -50%);
 }
